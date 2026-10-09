@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "THEREAT AI Protection",
+  "version": "1.0.0",
+  "description": "Local AI protection against suspicious websites.",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "THEREAT AI"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "blocked.html",
+        "blocked.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
